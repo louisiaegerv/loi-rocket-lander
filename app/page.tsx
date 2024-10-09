@@ -22,7 +22,7 @@ interface Star {
 const StarfieldHero: React.FC = () => {
   const starfieldRef = useRef<HTMLDivElement | null>(null);
   const [windowWidth, setWindowWidth] = useState<number | null>();
-  const [speed, setSpeed] = useState<number>(0.25);
+  const [speed] = useState<number>(0.25);
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -182,7 +182,7 @@ const StarfieldHero: React.FC = () => {
                 </form>
               ) : (
                 <p className="text-green-400">
-                  Thank you for signing up! We'll keep you posted.
+                  {" Thank you for signing up! We'll keep you posted."}
                 </p>
               )}
             </main>
